@@ -1,11 +1,11 @@
 
 from flask import Flask, jsonify, request
-from flask_cors import CORS
+
 import pickle
 
 
 app = Flask(__name__)
-CORS(app)
+
 MENU_FILE = 'menu_data.pickle'
 ORDER_FILE = 'order_data.pickle'
 
