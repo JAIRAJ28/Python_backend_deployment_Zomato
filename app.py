@@ -1,8 +1,9 @@
 from flask import Flask, jsonify, request
 import pickle
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 MENU_FILE = 'menu_data.pickle'
 ORDER_FILE = 'order_data.pickle'
 
@@ -165,4 +166,5 @@ def exit_app():
 
 
 if __name__ == '__main__':
+    
     app.run(debug=True)
